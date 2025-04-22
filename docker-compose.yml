@@ -1,0 +1,13 @@
+version: '3'
+services:
+  greeting_service:
+    build: ./greeting
+    ports:
+      - "5000:5000"
+    depends_on:
+      - addition_service
+
+  addition_service:
+    build: ./addition
+    ports:
+      - "5001:5001"

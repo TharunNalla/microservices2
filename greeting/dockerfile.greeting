@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+APT python3
+WORKDIR /app
+COPY greeting_service.py
+RUN pip install flask requests
+CMD ["python", "greeting_service.py"]
